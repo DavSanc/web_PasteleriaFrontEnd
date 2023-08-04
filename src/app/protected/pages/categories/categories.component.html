@@ -1,0 +1,81 @@
+<form
+  class="form form-product"
+  [formGroup]="categoryForm"
+  (ngSubmit)="createOrUpdateCategory()"
+  autocomplete="off"
+>
+  <h2>Categorias</h2>
+  <p>Registra nuevas categorias. Diligencia cada uno de los campos según sean requeridos.</p>
+  <div class="field">
+    <label for="name">Nombre*</label>
+    <input
+      id="name"
+      class="input-field"
+      type="text"
+      formControlName="name"
+      placeholder="Nombre del Producto"
+    />
+  </div>
+  <div class="field">
+    <label for="description">Descripción</label>
+    <textarea
+      id="description"
+      class="input-field"
+      formControlName="description"
+      placeholder="Descripción del Producto"
+      cols="20"
+      rows="5"
+    ></textarea>
+  </div>
+  <div class="field">
+    <button
+      type="submit"
+      [disabled]="categoryForm.invalid"
+    >{{ this.selectedCategory ? "Editar" : "Crear" }} Categoria</button>
+  </div>
+</form>
+
+
+<h2>Lista de productos</h2>
+
+<ng-container *ngIf="categories && categories.length > 0; then categoryList; else noCategories">
+</ng-container>
+
+<ng-template #categoryList>
+  <h3>Categorias registradas</h3>
+
+  <table class="table table-products">
+    <thead>
+      <th>Nombre</th>
+      <th>Description</th>
+      <th colspan="2">Acciones</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let category of categories">
+        <td>{{ category.name }}</td>
+        <td>{{ category.description }}</td>
+        <td>
+          <button
+            class="btn btn-primary"
+            (click)="loadCategory( category )"
+          >
+            Edit
+          </button>
+        </td>
+        <td>
+          <button
+            class="btn btn-primary"
+            (click)="deleteCategory( category._id )"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</ng-template>
+
+<ng-template #noCategories>
+  <h3>No has registdado categorias</h3>
+</ng-template>

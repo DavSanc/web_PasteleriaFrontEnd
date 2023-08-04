@@ -1,0 +1,48 @@
+<form
+  class="form form-auth form-login"
+  [formGroup]="registerForm"
+  (ngSubmit)="register()"
+  autocomplete="off"
+>
+  <h2>Registro</h2>
+  <div class="field">
+    <label for="nombre">Nombre</label>
+    <input
+      id="nombre"
+      class="input-field"
+      type="text"
+      formControlName="name"
+      placeholder="Ingrese su Nombre"
+    />
+  </div>
+  <div class="field">
+    <label for="email">Email</label>
+    <input
+      id="email"
+      class="input-field"
+      type="email"
+      formControlName="email"
+      placeholder="Ingrese su Email"
+    />
+  </div>
+  <div class="field">
+    <label for="password">Password</label>
+    <input
+      id="password"
+      class="input-field"
+      type="password"
+      formControlName="password"
+      placeholder="Ingrese su Password"
+    />
+  </div>
+  <div class="field">
+    <button
+      type="submit"
+      [disabled]="this.registerForm.invalid"
+    >Registrarse</button>
+  </div>
+  <div class="field">
+    <p>¿Ya tienes cuenta?</p>
+    <p>Ingresa <a routerLink="/auth/login">aquí</a></p>
+  </div>
+</form>

@@ -1,0 +1,38 @@
+<header>
+  <div class="container">
+    <nav>
+      <ul>
+        <li><a routerLink="products">Products</a></li>
+        <li><a routerLink="products/new">New Product</a></li>
+        <li><a routerLink="categories">Categories</a></li>
+      </ul>
+    </nav>
+    <nav>
+      <ul>
+        <li class="menu-container">
+          <a routerLink="/auth/dashboard">Juan</a>
+          <ul class="menu">
+            <li>
+              <a routerLink="/profile">Profile</a>
+            </li>
+            <li>
+              <a routerLink="/orders">Orders</a>
+            </li>
+            <li>
+              <a routerLink="/logout">Logout</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <button
+            type="button"
+            (click)="logout()"
+          >Salir</button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<router-outlet></router-outlet>

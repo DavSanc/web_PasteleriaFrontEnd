@@ -1,0 +1,48 @@
+<h2>Lista de productos</h2>
+
+<ng-container *ngIf="products && products.length > 0; then productList; else noProducts">
+</ng-container>
+
+<ng-template #productList>
+  <h3>Productos registrados</h3>
+  <table class="table table-products">
+    <thead>
+      <th>Nombre</th>
+      <th>Categoria</th>
+      <th>Precio</th>
+      <th>Cantidad</th>
+      <th>Ranking</th>
+      <th colspan="2">Acciones</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{ product.name }}</td>
+        <td>{{ product.category }}</td>
+        <td>{{ product.price | currency }}</td>
+        <td>{{ product.quantity }}</td>
+        <td>{{ product.ranking }}</td>
+        <td>
+          <button
+            class="btn btn-primary"
+            (click)="update( product._id )"
+          >
+            Edit
+          </button>
+        </td>
+        <td>
+          <button
+            class="btn btn-primary"
+            (click)="delete( product._id )"
+          >
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</ng-template>
+
+<ng-template #noProducts>
+  <h3>No has registrado productos</h3>
+</ng-template>

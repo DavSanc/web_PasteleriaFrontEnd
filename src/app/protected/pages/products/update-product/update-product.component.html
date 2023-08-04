@@ -1,0 +1,70 @@
+<form
+  class="form form-product"
+  [formGroup]="productForm"
+  (ngSubmit)="updateProduct()"
+  autocomplete="off"
+>
+  <h2>Actualiza Producto</h2>
+  <p>Actualiza producto existente. Diligencia cada uno de los campos según sean requeridos.</p>
+  <div class="field">
+    <label for="name">Nombre*</label>
+    <input
+      id="name"
+      class="input-field"
+      type="text"
+      formControlName="name"
+      placeholder="Nombre del Producto"
+    />
+  </div>
+  <div class="field">
+    <label for="price">Precio</label>
+    <input
+      id="price"
+      class="input-field"
+      type="number"
+      formControlName="price"
+      placeholder="Precio del Producto"
+    />
+  </div>
+  <div class="field">
+    <label for="quantity">Cantidad*</label>
+    <input
+      id="quantity"
+      class="input-field"
+      type="number"
+      formControlName="quantity"
+      placeholder="Cantidad disponible del Producto"
+    />
+  </div>
+  <div class="field">
+    <label for="category">Categoria</label>
+    <select
+      id="category"
+      class="input-field"
+      formControlName="category"
+    >
+      <option value="">Seleccione...</option>
+      <option
+        *ngFor="let category of categories"
+        value="{{ category.name }}"
+      >{{ category.name }}</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="description">Descripción</label>
+    <textarea
+      id="description"
+      class="input-field"
+      formControlName="description"
+      placeholder="Descripción del Producto"
+      cols="20"
+      rows="5"
+    ></textarea>
+  </div>
+  <div class="field">
+    <button
+      type="submit"
+      [disabled]="this.productForm.invalid"
+    >Actualizar Producto</button>
+  </div>
+</form>
