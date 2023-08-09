@@ -15,6 +15,8 @@ import { AboutComponent } from './components/about/about.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { SubscriptionComponent } from './components/subscription/subscription.component';
 import { ReviewComponent } from './components/review/review.component';
+import { SectionBrandComponent } from './components/section-brand/section-brand.component';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { ReviewComponent } from './components/review/review.component';
     AboutComponent,
     MenuComponent,
     SubscriptionComponent,
-    ReviewComponent
+    ReviewComponent,
+    SectionBrandComponent,
+    
   ],
   imports: [
     BrowserModule,
