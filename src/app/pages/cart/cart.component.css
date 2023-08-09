@@ -1,0 +1,27 @@
+.button {
+    padding: 1.2rem;
+    border-radius: initial;   
+}
+.btn-substract, .btn-add, .box-quantity{
+    color: var(--primary-color);
+    width: 2.5rem;
+    font-weight: bold;
+    height: 2.5rem;
+    display: block;
+}
+.btn-substract, .btn-add{
+    background-color: var(--primary-color);
+    width: 2.5rem;
+    color: white;
+    border: none;
+    height: 2.5rem;
+    font-weight: bold;
+}
+.card-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-quantity{
+    text-align: center;
+}

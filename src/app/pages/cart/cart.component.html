@@ -1,0 +1,44 @@
+
+
+<ng-container *ngIf="cart && cart.length>0; then cartList; else noList"></ng-container>
+
+<ng-template #cartList>
+
+    <div class="menu-content">
+        <div class="menu-items">
+                <div class="menu-item flex" *ngFor="let product of cart">
+                        <img [srcset]="product.urlImage" alt="" class="menu-img">
+
+                        <div class="menuItem-details">
+                                <h4 class="menuItem-topic">{{product.name}}</h4>
+                                <p class="menuItem-des">{{product.description}}</p>
+                        </div>
+
+                        <div class="menuItem-price flex">
+                                
+                                <div class="card-quantity">
+                                    <button class="btn-substract" (click)="subtractQuantity(product)">-</button>
+                                    <span class="box-quantity">{{product.quantity}}</span>
+                                    <button class="btn-add" (click)="addQuantity(product)">+</button>
+                                </div>
+                                <span class="">{{product.price | currency }}</span>
+                        </div>
+
+                        <div class="menuItem-price flex">
+                                <button class="button" (click)="removeToCart(product._id)">
+                                        <fa-icon [icon]="cartIcon"></fa-icon>
+                                </button>
+                        </div>
+                </div>
+                
+                
+                
+        </div>
+
+        
+</div>
+
+</ng-template>
+
+<ng-template #noList>No hay productos</ng-template>
+

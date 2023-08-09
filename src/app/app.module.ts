@@ -16,6 +16,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { SubscriptionComponent } from './components/subscription/subscription.component';
 import { ReviewComponent } from './components/review/review.component';
 import { SectionBrandComponent } from './components/section-brand/section-brand.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { SectionBrandComponent } from './components/section-brand/section-brand.
     SubscriptionComponent,
     ReviewComponent,
     SectionBrandComponent,
+    CartComponent,
     
   ],
   imports: [
