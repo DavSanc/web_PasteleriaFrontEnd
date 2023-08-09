@@ -13,6 +13,8 @@ import { FooterComponent } from './components/partials/footer/footer.component';
 import { SwiperComponent } from './components/swiper/swiper.component';
 import { AboutComponent } from './components/about/about.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { SubscriptionComponent } from './components/subscription/subscription.component';
+import { ReviewComponent } from './components/review/review.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { MenuComponent } from './components/menu/menu.component';
     FooterComponent,
     SwiperComponent,
     AboutComponent,
-    MenuComponent
+    MenuComponent,
+    SubscriptionComponent,
+    ReviewComponent
   ],
   imports: [
     BrowserModule,
