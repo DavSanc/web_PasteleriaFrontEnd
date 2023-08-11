@@ -23,15 +23,18 @@ export class ProductsService {
     const token = localStorage.getItem( 'token' );    // Obtiene el Token del LocalStorage
     this.token = token ? token : '';                  // Verifica si existe el token en el LocalStorage
     this.headers = new HttpHeaders().set( 'X-Token', `${ this.token }` );
+
     // console.log( this.token );
   }
 
   /** Realiza petición al endpoint del BackEnd que registra productos */
-  createProduct( product: Product ) {
+  createProduct( formData: FormData ) {
+    this.headers.append('Accept', 'application/json');
+
 
     return this.http.post(
       `${ this.BASE_URL }/products`,      // URL del BackEnd al que debemos hacer la peticion
-      product,                            // Objeto de producto a crear
+      formData,                            // Objeto de producto a crear
       { headers: this.headers }           // Cabeceras con información requerida
     );
   }

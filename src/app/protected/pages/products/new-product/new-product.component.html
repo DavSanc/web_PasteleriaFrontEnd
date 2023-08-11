@@ -3,6 +3,7 @@
   [formGroup]="productForm"
   (ngSubmit)="createProduct()"
   autocomplete="off"
+  enctype="multipart/form-data"
 >
   <h2>Productos</h2>
   <p>Registra nuevos productos. Diligencia cada uno de los campos según sean requeridos.</p>
@@ -24,6 +25,17 @@
       type="number"
       formControlName="price"
       placeholder="Precio del Producto"
+    />
+  </div>
+  <div class="field">
+    <label for="image">Imagen del producto</label>
+    <input
+      id="image"
+      class="input-field"
+      type="file"
+      formControlName="urlImage"
+      accept="image/*"
+      #fileInput
     />
   </div>
   <div class="field">
