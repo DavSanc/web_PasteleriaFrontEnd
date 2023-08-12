@@ -1,4 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+#img-logo {
+  height: 21rem;
+  position: relative;
+  top: 7rem;
+  background: transparent;
+  width: 13rem;
+}
+a{
+  color: initial;
+}
+a:hover{
+  color: initial;
+}
+
+
+a.logo-content{
+  background: transparent;
+}
+a.logo-content:link{
+  background: transparent;
+}
+a.logo-content:visited{
+  background: transparent;
+}
+a.logo-content:hover{
+  background: transparent;
+}
 .form-auth,
 .form-product {
   max-width: 50%;

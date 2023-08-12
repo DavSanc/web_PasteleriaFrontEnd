@@ -1,0 +1,13 @@
+h2.title {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+p.description{
+    text-align: center;
+}
+
+.table-products {
+    width: 70%;
+    margin: 2rem auto;
+}

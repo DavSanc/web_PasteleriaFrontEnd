@@ -18,9 +18,6 @@ export class NewProductComponent implements OnInit {
   @ViewChild('fileInput') fileInput!: ElementRef;
   categories!: Array<any>;
 
-  
-  
-
   constructor(
     private fb: FormBuilder,
     private productService: ProductsService,

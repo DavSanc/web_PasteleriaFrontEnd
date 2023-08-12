@@ -3,6 +3,7 @@
   [formGroup]="productForm"
   (ngSubmit)="updateProduct()"
   autocomplete="off"
+  enctype="multipart/form-data"
 >
   <h2>Actualiza Producto</h2>
   <p>Actualiza producto existente. Diligencia cada uno de los campos según sean requeridos.</p>
@@ -35,6 +36,17 @@
       formControlName="quantity"
       placeholder="Cantidad disponible del Producto"
     />
+    <div class="field">
+      <label for="image">Imagen del producto</label>
+      <input
+        id="image"
+        class="input-field"
+        type="file"
+        formControlName="urlImage"
+        accept="image/*"
+        #fileInput
+      />
+    </div>  
   </div>
   <div class="field">
     <label for="category">Categoria</label>

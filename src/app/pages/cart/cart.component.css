@@ -25,3 +25,57 @@
 .box-quantity{
     text-align: center;
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cart-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  .products {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .checkout {
+    flex: 1;
+    padding-left: 20px;
+    border-left: 1px solid #ccc;
+  }
+  
+  .product-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .product-list li {
+    margin-bottom: 10px;
+  }
+  
+  form {
+    width: 100%;
+  }
+  
+  label, input, textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }

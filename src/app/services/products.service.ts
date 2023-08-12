@@ -48,7 +48,7 @@ export class ProductsService {
   getProductsByUser( userId: string ) {
 
     return this.http.get<Products>(
-      `${ this.BASE_URL }/products/user/${ userId }`,   // URL del BackEnd al que debemos hacer la peticion
+      `${ this.BASE_URL }/products/user`,   // URL del BackEnd al que debemos hacer la peticion
       { headers: this.headers }                         // Cabeceras con información requerida
     )
     .pipe(
@@ -78,11 +78,11 @@ export class ProductsService {
     );
   }
 
-  updateProduct( productId: string, product: Product ) {
+  updateProduct( productId: string, formData: FormData ) {
 
     return this.http.patch(
       `${ this.BASE_URL }/products/${ productId }`,   // URL del BackEnd al que debemos hacer la peticion
-      product,
+      formData,
       { headers: this.headers }                         // Cabeceras con información requerida
     );
   }
