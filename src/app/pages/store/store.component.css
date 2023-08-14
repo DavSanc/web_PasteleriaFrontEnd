@@ -1,0 +1,12 @@
+.menu .menu-content {
+    grid-template-columns: 1fr;
+}
+
+.menu-item {
+    position: relative;
+    padding: 2rem 2.5rem;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

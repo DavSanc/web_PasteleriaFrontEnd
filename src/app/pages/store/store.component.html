@@ -1,1 +1,49 @@
-<p>store works!</p>
+<ng-container *ngIf="products && products.products.length > 0 && products.products; then productList; else noProducts">
+</ng-container>
+
+<ng-template #productList>
+        <section class="section menu" id="menu">
+                <div class="menu-container container">
+                        <div class="meu-text">
+                                <h4 class="section-subtitle"><i>Nuestro Menu</i></h4>
+                                <h2 class="section-title">Nuestro menu popular</h2>
+                                <p class="section-description">
+                                    Ademas tenemos un espacio con un ambiente espectacular para ti y los tuyos. estamos seguros que pasaras los mejores momentos aqui.
+                                </p>
+                        </div>
+            
+                        <div class="menu-content">
+                                <div class="menu-items">
+                                        <div class="menu-item flex" *ngFor="let product of products.products">
+                                                <img [srcset]="product.urlImage" alt="" class="menu-img">
+            
+                                                <div class="menuItem-details">
+                                                        <h4 class="menuItem-topic">{{product.name}}</h4>
+                                                        <p class="menuItem-des">{{product.description}}</p>
+                                                </div>
+            
+                                                <div class="menuItem-price flex">
+                                                        <span class="discount-price">{{product.quantity}}</span>
+                                                        <span class="">{{product.price | currency }}</span>
+                                                </div>
+
+                                                <div class="menuItem-price flex">
+                                                        <button class="button" (click) = "addToCart(product)">
+                                                                <fa-icon [icon]="cartIcon"></fa-icon>
+                                                        </button>
+                                                </div>
+                                        </div>
+                                        <button class="button btn-ver-mas" routerLink="/store">Ver mas productos</button>
+                                        
+                                        
+                                        
+                                </div>
+                        </div>
+                </div>
+            </section>
+
+</ng-template>
+
+<ng-template #noProducts>
+     <h3>La tienda no posee productos</h3>
+</ng-template>

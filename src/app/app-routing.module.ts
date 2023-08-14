@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { StoreComponent } from './pages/store/store.component';
 
 const routes: Routes = [
   /** Define la ruta de los dos modulos usando carga perezosa */
@@ -16,7 +17,7 @@ const routes: Routes = [
   },
   {
     path: 'store',
-    component: AboutUsComponent,
+    component: StoreComponent,
   },
   {
     path: 'about-us',
