@@ -1,0 +1,20 @@
+.title {
+    padding: 9rem 0 0 0;
+    width: 66%;
+    margin: 0 auto;
+    font-size: 2.8rem;
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between  ;
+    align-items: flex-start;
+    margin: 5rem 0;
+    gap: 2rem;
+}
+
+.image-cake {
+    width: 50%;
+    float: right;
+    padding: 0 0 0 2rem;
+}
