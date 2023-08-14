@@ -25,12 +25,10 @@
 
           <div class="menu-content">
                   <ul class="menu-list flex">
-                          <li><a href="#home" class="nav-link active-navlink">Inicio</a></li>
-                          <li><a href="#about" class="nav-link">Sobre Nosotros</a></li>
-                          <li><a href="#menu" class="nav-link">Menu</a></li>
-                          <li><a href="#review" class="nav-link">Opiniones</a></li>
+                          <li><a routerLink="/about-us" class="nav-link"  routerLinkActive="active-navlink">Sobre Nosotros</a></li>
+                          <li><a routerLink="/store" class="nav-link"  routerLinkActive="active-navlink">Tienda</a></li>
                           <li class="menu-container" *ngIf="user.name">
-                            <a routerLink="/auth/dashboard">{{user.name}}</a>
+                            <a routerLink="/auth/dashboard" routerLinkActive="active-navlink">{{user.name}}</a>
                             <ul class="menu">
                               <li>
                                 <a routerLink="/profile">Profile</a>
@@ -46,7 +44,7 @@
                             </ul>
                           </li>
                           <li class="menu-container">
-                            <a routerLink="/cart" class="cart-page">Cart <span>9</span></a>
+                            <a routerLink="/cart" class="cart-page" routerLinkActive="active-navlink">Cart <span>9</span></a>
                             <ul class="menu">
                               <li>
                                 <a routerLink="/profile">Profile</a>

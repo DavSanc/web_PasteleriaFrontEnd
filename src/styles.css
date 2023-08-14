@@ -352,11 +352,15 @@ img{
     color: var(--text-color);
   }
 }
-
-
+.menu-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 5rem 0 5rem 0;
+  gap: 1rem;
+}
 /* Home */
 .home{
-  height: 100vh;
   width: 100%;
   /* background-color: red; */
 }
@@ -568,7 +572,6 @@ img{
 .menuItem-price{
   flex-direction: column;
   padding-left: 2rem;
-  border-left: 2px solid rgba(0, 0, 0, 0.3);
 }
 .discount-price{
   font-size: 1.8rem;
