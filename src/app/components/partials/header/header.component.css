@@ -62,3 +62,16 @@ a span {
   background-color: #fff;
   color: rgb(236, 68, 68);
 }
+.nav-login {
+  border: 2px solid #ea8ea0;
+  color: #ea8ea0;;
+}
+.nav-login:hover {
+  background-color: rgb(242,242,242);
+  color: var(--section-bg);
+}
+.nav-register {
+  background-color: #ea8ea0;
+  border: 2px solid #ea8ea0;
+  color: white;
+}

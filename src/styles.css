@@ -983,6 +983,7 @@ img{
   display: flex;
   align-items: center;
   justify-content: center;
+  background-size: cover;
 }
 
 .ng-fa-icon {

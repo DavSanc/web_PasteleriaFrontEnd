@@ -1,33 +1,14 @@
-<header>
+<header class="header-admin">
+ 
   <div class="container">
-    <nav>
-      <ul>
-        <li><a routerLink="products">Products</a></li>
-        <li><a routerLink="products/new">New Product</a></li>
-        <li><a routerLink="categories">Categories</a></li>
-      </ul>
-    </nav>
-    <nav>
-      <ul>
-        <li class="menu-container">
-          <a routerLink="/auth/dashboard">Juan</a>
-          <ul class="menu">
-            <li>
-              <a routerLink="/profile">Profile</a>
-            </li>
-            <li>
-              <a routerLink="/orders">Orders</a>
-            </li>
-            <li>
-              <a routerLink="/logout">Logout</a>
-            </li>
-          </ul>
-        </li>
+    
+    <nav class="menu-admin">
+      <ul class="ul-menu-admin">
+        <li><a class="link-item-admin" routerLink="products">Products</a></li>
+        <li><a class="link-item-admin" routerLink="products/new">New Product</a></li>
+        <li><a class="link-item-admin" routerLink="categories">Categories</a></li>
         <li>
-          <a routerLink="/cart" class="cart-page">Cart <span>9</span></a>
-        </li>
-        <li>
-          <button
+          <button class="btn-item-admin"
             type="button"
             (click)="logout()"
           >Salir</button>
