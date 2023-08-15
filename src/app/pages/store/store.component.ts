@@ -45,7 +45,7 @@ export class StoreComponent implements OnInit {
           price: product.price,
           quantity: 1,
           describe: product.description,
-          urlImg: product.urlImage,
+          urlImage: product.urlImage,
           total: product.price,
           stock: product.quantity
 

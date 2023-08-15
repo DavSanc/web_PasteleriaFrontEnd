@@ -29,13 +29,25 @@ a.logo-content:hover{
 .form-auth,
 .form-product {
   max-width: 50%;
+  width: 30%;
   border: 1px dotted;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  padding: 5.5rem 0;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  opacity: .9;
 }
+.btn-auth {
+  background-color: var(--section-bg);
+  color: white;
+  padding: 0.7rem 2.2rem;
+  opacity: .8;
+}
+
 
 .form-auth .field,
 .form-product .field {
@@ -962,4 +974,13 @@ img{
     padding: 1.4rem 2rem;
 
 }
+}
+
+.pattern{
+  background-image: url('./assets/images/patron.jpg');
+  background-repeat: repeat;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

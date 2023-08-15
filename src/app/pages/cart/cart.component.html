@@ -10,7 +10,7 @@
                                 <div class="" *ngFor="let product of cart">
                                         <div class="card">
                                                 <div class="card-image">
-                                                        <img [srcset]="product.urlImage" alt="" class="menu-img">
+                                                        <img [src]="product.urlImage" alt="" class="menu-img">
                                                         <h4 class="menuItem-topic">{{product.name}}</h4>
                                                         <span class="">{{product.price | currency }}</span>
                                                 </div>
