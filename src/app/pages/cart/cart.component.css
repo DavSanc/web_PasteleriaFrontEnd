@@ -197,3 +197,7 @@ input#Address-type-office {
   }
 
 }
+
+.ng-fa-icon {
+  font-size: initial;
+}

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faTrash, faPencil } from '@fortawesome/free-solid-svg-icons';
+
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { ProductsService } from 'src/app/services/products.service';
 import { Product } from '../../interfaces/product.interface';
@@ -12,6 +14,8 @@ import { Router } from '@angular/router';
 export class ProductsComponent implements OnInit {
   userId!: string;
   products!: Array<Product>;
+  deleteIcon = faTrash;
+  editIcon = faPencil;
 
   constructor(
     private authService: AuthService,

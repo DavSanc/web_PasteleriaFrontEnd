@@ -11,3 +11,7 @@ p.description{
     width: 70%;
     margin: 2rem auto;
 }
+.product-image {
+    width: 13rem;
+    height: 13rem;
+}

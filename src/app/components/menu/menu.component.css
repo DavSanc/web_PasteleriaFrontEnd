@@ -7,3 +7,6 @@
 .menu-item{
     justify-content: space-between;
 }
+.ng-fa-icon {
+    font-size: initial;
+}

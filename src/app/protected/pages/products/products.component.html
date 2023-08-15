@@ -8,28 +8,32 @@
     <p class="description">Productos registrados por el usuario</p>
     <table class="table table-products">
       <thead>
-        <th>imagen</th>
-        <th>Nombre</th>
-        <th>Categoria</th>
-        <th>Precio</th>
-        <th>Cantidad</th>
-        <th>Ranking</th>
-        <th colspan="2">Acciones</th>
+        <th class="table-title title-imagen"></th>
+        <th class="table-title title-nombre">Nombre</th>
+        <th class="table-title title-descripcion">Description</th>
+        <th class="table-title title-detalles">Detalles</th>
+        <th colspan="2" class="table-title title-acciones"></th>
       </thead>
       <tbody>
         <tr *ngFor="let product of products">
-          <td><img [src]="product.urlImage" [alt]="product.name"></td>
-          <td>{{ product.name }}</td>
-          <td>{{ product.category }}</td>
-          <td>{{ product.price | currency }}</td>
-          <td>{{ product.quantity }}</td>
-          <td>{{ product.ranking }}</td>
+          <td><img class="product-image" [src]="product.urlImage" [alt]="product.name"></td>
+          <td class="product-name">
+            <strong>{{ product.name }}</strong>
+            <p class="product-description">{{product.description}}</p>
+            <p>{{ product.category }}</p>
+          </td>
+          <td class="product-details">
+            <p>{{ product.price | currency }}</p>
+            <p>{{ product.quantity }}</p>
+           <p>{{ product.ranking }}</p>
+          </td>
+          
           <td>
             <button
               class="btn btn-primary"
               (click)="update( product._id )"
             >
-              Edit
+              <fa-icon [icon]="editIcon"></fa-icon>
             </button>
           </td>
           <td>
@@ -37,7 +41,7 @@
               class="btn btn-primary"
               (click)="delete( product._id )"
             >
-              Delete
+            <fa-icon [icon]="deleteIcon"></fa-icon>
             </button>
           </td>
         </tr>
