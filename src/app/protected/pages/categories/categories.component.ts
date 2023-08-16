@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { faPencil, faTrash } from '@fortawesome/free-solid-svg-icons';
+
 import { CategoriesService } from 'src/app/services/categories.service';
 import { Category } from '../../interfaces/category.interface';
 
@@ -12,6 +14,8 @@ export class CategoriesComponent implements OnInit {
   categories! : Array<Category>;    // categories! : Category[];
   selectedCategory: Category | null = null;
   selectedCategoryId!: string;
+  editIcon = faPencil;
+  deleteIcon = faTrash;
 
   // Procuramos usar los mismos nombres que espera nuestra API en las propiedades que agrupamos en nuestro FormBuilder Group
   categoryForm: FormGroup = this.fb.group({

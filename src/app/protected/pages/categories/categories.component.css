@@ -1,0 +1,48 @@
+.page.page-categories {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.content {
+    margin: 9rem 0;
+    display: flex;
+    gap: 4rem;
+}
+
+ h2, h3 {
+    text-align: center;
+ }
+
+ .list-categories {
+    flex: 74%;
+    padding: 5.5rem 0;
+    background-color: lightgray;
+    opacity: .8;
+    border-radius: 0.6rem;
+    padding: 0 2rem;
+}
+
+.ng-fa-icon {
+    font-size: 2.6rem;
+}
+
+form.form.form-product.form-center {
+    width: 60%;
+}
+
+.bg-pouder-table-pattern::before {
+    background-image: url( '../../../../assets/images/pastries-pattern.jpg' ); 
+    content: "";
+    background-size: 27%;
+    background-repeat: repeat;
+    /* position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px; */
+    opacity: 0.25;
+    z-index: -1;
+    height: 250vh;
+}

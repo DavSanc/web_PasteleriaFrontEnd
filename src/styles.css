@@ -26,11 +26,7 @@ a.logo-content:visited{
 a.logo-content:hover{
   background: transparent;
 }
-.form-auth,
-.form-product {
-  max-width: 50%;
-  width: 30%;
-  border: 1px dotted;
+.form-auth, .form-product {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,8 +35,11 @@ a.logo-content:hover{
   padding: 5.5rem 0;
   color: var(--white-color);
   background-color: var(--primary-color);
-  opacity: .9;
+  opacity: 0.6;
+  box-shadow: 0px 8px 15px #b98565;
+  flex: auto;
 }
+
 .btn-auth {
   background-color: var(--section-bg);
   color: white;
@@ -1045,4 +1044,65 @@ img{
 .btn-flotante:hover{
   background-color: var(--primary-color);
   box-shadow: 0px 8px 15px #ba9d8a;
+}
+
+.table {
+  width: 100%;
+}
+
+button.btn.icon {
+  background: #84a65d;
+  color: white;
+  width: 4.6rem;
+  height: 4.6rem;
+  border: 2rem solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.6rem;
+  box-shadow: 2px 2px 2px gray;
+}
+
+button.btn.icon:hover {
+  opacity: .7;
+}
+
+button.btn.icon.icon-edit {
+  opacity: .8;
+}
+
+button.btn.icon.icon-edit:hover {
+  opacity: .5;
+}
+
+td.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0.35rem 0;
+}
+
+.table-thead th {
+  height: 4rem;
+  color: #84a65d;
+  font-weight: bolder;
+}
+
+form.form.form-auth.form-center,
+form.form.form-product.form-center {
+  flex: initial;
+  width: 35%;
+  border-radius: 0.5rem;
+}
+
+form.form-product p {
+  padding: 2rem;
+}
+
+.form .input-field {
+  padding: 0.4rem;
+  width: 22rem;
+  border-radius: 0.4rem;
+  border: none;
 }
